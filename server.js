@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const Rollbar = require("rollbar")
+import getPokemon from "./main"
 
 let rollbar = new Rollbar({
   accessToken: '905e58b2bbe740af8cafcd01e7f553a7',
@@ -24,7 +25,7 @@ app.get("/", function(req, res){
   }
 
   try {
-    axios.get("https://pokeapi.co/api/v2/pokemon")
+    getPokemon();
   } catch (error) {
     rollbar.warning("could not fetch pokeapi");
   }
