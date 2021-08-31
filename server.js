@@ -11,6 +11,7 @@ let rollbar = new Rollbar({
 const app = express();
 app.use(express.json())
 
+
 app.get("/", function(req, res){
   res.sendFile(path.join(__dirname, "./index.html"));
 
@@ -21,11 +22,11 @@ app.get("/", function(req, res){
   } catch (error) {
     rollbar.error(error);
   }
-  
+
   try {
-    getPokemon();
+    axios.get("https://pokeapi.co/api/v2/pokemon")
   } catch (error) {
-    rollbar.warning("Could not fetch PokeAPI");
+    rollbar.warning("could not fetch pokeapi");
   }
 });
 
