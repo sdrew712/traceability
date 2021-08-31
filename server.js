@@ -23,24 +23,24 @@ app.get("/", function(req, res){
   }
 });
 
-const button = document.querySelector('button');
+// const button = document.querySelector('button');
 
-function getPokemon(){
-  axios.get("")
-  .then(res => {
-    pokemon = res.data.results[0].pokemon;
+// function getPokemon(){
+//   axios.get("")
+//   .then(res => {
+//     pokemon = res.data.results[0].pokemon;
 
-    for (let i = 0; i < pokemon.length; i++){
-      axios.get(pokemon[i])
-      .then(res => {
-        console.log(pokemon[i]);
-        }     
-      )
-    }
-  })
-}
+//     for (let i = 0; i < pokemon.length; i++){
+//       axios.get(pokemon[i])
+//       .then(res => {
+//         console.log(pokemon[i]);
+//         }     
+//       )
+//     }
+//   })
+// }
 
-button.addEventListener("click", clickedButton);
+// button.addEventListener("click", clickedButton);
 
 try {
   getPokemon();
