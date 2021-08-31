@@ -24,12 +24,6 @@ app.get("/", function(req, res){
   } catch (error) {
     rollbar.error(error);
   }
-
-  try {
-    getPokemon();
-  } catch (error) {
-    rollbar.warning("Could not fetch PokeAPI");
-  }
 });
 
 const port = process.env.PORT || 4005;
