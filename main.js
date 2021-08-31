@@ -20,6 +20,8 @@ function getPokemon(){
 
 button.addEventListener("click", getPokemon);
 
+rollbar.info("yo")
+
 try {
   getPokemon();
   rollbar.info("PokeAPI successfully fetched.")
