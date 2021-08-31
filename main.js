@@ -1,6 +1,6 @@
 const button = document.querySelector("button")
 
-export default function getPokemon(){
+function getPokemon(){
   axios.get("https://pokeapi.co/api/v2/pokemon")
   .then(res => {
     let randomIndex = Math.floor(Math.random() * 20)
