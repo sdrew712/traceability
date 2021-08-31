@@ -12,6 +12,7 @@ let rollbar = new Rollbar({
 const app = express();
 app.use(express.json())
 
+app.use('/js', express.static(path.join(__dirname, './main.js')))
 
 app.get("/", function(req, res){
   res.sendFile(path.join(__dirname, "./index.html"));
