@@ -1,11 +1,3 @@
-const Rollbar = require("rollbar")
-
-let rollbar = new Rollbar({
-  accessToken: '905e58b2bbe740af8cafcd01e7f553a7',
-  captureUncaught: true,
-  captureUnhandledRejections: true
-})
-
 const button = document.querySelector("button")
 
 function getPokemon(){
@@ -23,8 +15,6 @@ function getPokemon(){
     div.appendChild(h2)
   
     document.body.appendChild(div)
-
-    rollbar.info("Pokemon sent successfully.")
   })
 }
 
