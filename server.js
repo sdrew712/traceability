@@ -25,14 +25,6 @@ app.get("/", function(req, res){
     rollbar.error(error);
   }
 
-  function getPokemon(){
-    axios.get("https://pokeapi.co/api/v2/pokemon")
-    .then(res => {
-      let randomIndex = Math.floor(Math.random() * 20)
-      pokemon = res.data.results[randomIndex].name
-    })
-  }
-
   try {
     getPokemon();
   } catch (error) {
