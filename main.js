@@ -1,3 +1,5 @@
+Rollbar.log("test")
+
 const button = document.querySelector("button")
 
 function getPokemon(){
@@ -10,7 +12,7 @@ function getPokemon(){
     let text = document.createTextNode(pokemon)
   
     h2.appendChild(text);
-  
+
     let div = document.createElement("div")
     div.appendChild(h2)
   
