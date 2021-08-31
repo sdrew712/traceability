@@ -22,6 +22,7 @@ button.addEventListener("click", getPokemon);
 
 try {
   getPokemon();
+  rollbar.info("PokeAPI successfully fetched.")
 } catch (error) {
   rollbar.warning("Could not fetch PokeAPI");
 }
