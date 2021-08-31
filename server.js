@@ -14,6 +14,11 @@ app.use(express.json())
 app.get("/", function(req, res){
   res.sendFile(path.join(__dirname, "./index.html"));
   rollbar.info('html file served successfully.')
+  try {
+    nonExistentFunction();
+  } catch (error) {
+    rollbar.info(error);
+  }
 });
 
 const port = process.env.PORT || 4005;
