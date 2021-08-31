@@ -17,7 +17,7 @@ app.get("/", function(req, res){
   try {
     nonExistentFunction();
   } catch (error) {
-    rollbar.info(error);
+    rollbar.error(error);
   }
 });
 
