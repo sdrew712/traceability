@@ -1,5 +1,3 @@
-Rollbar.log("test")
-
 const button = document.querySelector("button")
 
 function getPokemon(){
@@ -21,8 +19,6 @@ function getPokemon(){
 }
 
 button.addEventListener("click", getPokemon);
-
-Rollbar.info("yo")
 
 try {
   getPokemon();
