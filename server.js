@@ -13,6 +13,7 @@ const app = express();
 app.use(express.json())
 
 app.use('/js', express.static(path.join(__dirname, './main.js')))
+app.use('/axios', express.static(path.join(__dirname, "./node_modules/axios/dist/axios.min.js")))
 
 app.get("/", function(req, res){
   res.sendFile(path.join(__dirname, "./index.html"));
