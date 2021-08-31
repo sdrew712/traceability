@@ -1,5 +1,3 @@
-const axios = require("axios")
-
 const button = document.querySelector("button")
 
 function getPokemon(){
